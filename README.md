@@ -58,11 +58,6 @@ Tune behavior in `Config` in `app.py`:
 - **`module 'mediapipe' has no attribute 'solutions'`**
   - Install the pinned compatible version in `requirements.txt`.
 
-- **Push fails with `does not appear to be a git repository`**
-  - Your remote is likely wrong (example of wrong: `origin finger_biting`).
-  - Set a full GitHub URL:
-    - `git remote set-url origin https://github.com/<username>/finger-bite-screen-off.git`
-  - Then push again: `git push -u origin main`
 
 - **Camera not opening**
   - Grant camera access in macOS Privacy settings for the app you're running from.
