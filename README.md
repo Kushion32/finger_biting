@@ -1,6 +1,6 @@
 # Finger Bite Screen Off (macOS)
 
-A small local computer-vision app that watches for a "finger near mouth" gesture and puts your display to sleep on macOS.
+Local computer-vision app that watches for a "finger near mouth" gesture and puts your display to sleep on macOS.
 
 ## Features
 
@@ -28,10 +28,10 @@ pmset displaysleepnow
 - Python 3.9+
 - Webcam access permission for your terminal app (Terminal/Cursor)
 
-## Quick Start
+## Quick Start (Local)
 
 ```bash
-cd /Users/james/Desktop/ECE495/finger-bite-screen-off
+cd finger-bite-screen-off
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
@@ -58,24 +58,11 @@ Tune behavior in `Config` in `app.py`:
 - **`module 'mediapipe' has no attribute 'solutions'`**
   - Install the pinned compatible version in `requirements.txt`.
 
+- **Push fails with `does not appear to be a git repository`**
+  - Your remote is likely wrong (example of wrong: `origin finger_biting`).
+  - Set a full GitHub URL:
+    - `git remote set-url origin https://github.com/<username>/finger-bite-screen-off.git`
+  - Then push again: `git push -u origin main`
+
 - **Camera not opening**
   - Grant camera access in macOS Privacy settings for the app you're running from.
-
-## Share It With Friends (GitHub)
-
-From the project folder:
-
-```bash
-git init
-git add .
-git commit -m "Initial commit: finger bite screen off app"
-git branch -M main
-git remote add origin <your-repo-url>
-git push -u origin main
-```
-
-Then share the GitHub link. Your friend can clone and run using the Quick Start section above.
-
-## License
-
-MIT
